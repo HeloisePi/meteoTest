@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  },
+  "include": [
+    "./ts/app.ts"   // ou le chemin vers ton fichier TypeScript
+  ]
+}
