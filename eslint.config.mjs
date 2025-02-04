@@ -1,27 +1,27 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
+import pluginImport from "eslint-plugin-import";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts}"]
-  },
-  {
+    files: ["**/*.{js,mjs,cjs,ts}"],
     languageOptions: { 
-      globals: globals.browser 
+      globals: globals.browser,
+      sourceType: "module"
     }
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    plugins: ["import"],
     rules: {
-      "@typescript-eslint/no-explicit-any": "error", // Interdit `any`
-      "@typescript-eslint/explicit-function-return-type": "warn", // Avertit si une fonction n'a pas de type de retour
-      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }], // Ignore les variables commencant par `_`
-      "no-console": "warn", // Avertit si `console.log()` est utilisé
-      "eqeqeq": ["error", "always"], // Oblige `===` au lieu de `==`
-      "curly": "error", // Force l'utilisation des `{}` dans les blocs if, while, etc.
+      "@typescript-eslint/explicit-function-return-type": "warn",
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+      "curly": "error",
+      "import/no-unresolved": "error",
+      "import/extensions": ["error", "ignorePackages", { "ts": "never", "js": "never" }]
     }
   }
 ];

@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "esModuleInterop": true,
+    "module": "ESNext",
     "moduleResolution": "node",
-    "skipLibCheck": true
+    "target": "ES6",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true
   },
   "include": [
-    "./ts/app.ts"   // ou le chemin vers ton fichier TypeScript
+    "./ts/app.ts"  // Assure-toi que ce chemin est correct
   ]
 }

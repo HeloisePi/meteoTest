@@ -1,0 +1,56 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript
+dist/
+tsconfig.tsbuildinfo
+
+# Environnement
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Logs
+logs/
+*.log
+logs/*.log
+logs/**/*.log
+npm-debug.log
+yarn-debug.log
+pnpm-debug.log
+*.log.*
+
+# Éditeurs et IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Tests et couverture de code
+coverage/
+.nyc_output/
+
+# Build tools
+.eslintcache
+.cache/
+.parcel-cache/
+
+# Docker
+docker-compose.override.yml
